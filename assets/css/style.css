@@ -17,6 +17,25 @@
 .ui-menu-color-download {
     background-color: #525252;
 }
+/*--------------------------------------Special Paddings, Margins and Text*/
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.inline-block {
+    display: inline-block;
+}
 /*--------------------------------------Heading*/
 header {
     margin: 0;
@@ -103,9 +122,55 @@ header {
     letter-spacing: 2px;
 }
 
-/*--------------------------------------Hover*/
+/*--------------------------------------Hover.css*/
 
 .hvr-sweep-to-bottom:before {
     background: rgba(0, 0, 0, 0.2);
     height: 120px;
+}
+
+/*--------------------------------------Footer*/
+footer {
+    background: #525252;
+    min-height: 120px;
+    color: #fafafa;
+    margin: 0;
+}
+
+.cv-pdf {
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+.cv-pdf:hover {
+    color: #e84610;
+}
+
+.social-links li a i {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 12px 0;
+    color: #fafafa;
+    text-align: center;
+    background: #8f8f8f;
+    font-size: 13px;
+    line-height: 7px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #e84610;
+}
+
+#footer-details {
+    padding: 20px;
 }
