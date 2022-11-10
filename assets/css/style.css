@@ -18,7 +18,7 @@
     background-color: #525252;
 }
 .bg-color-three-reasons {
-    color: #fff;
+    background-color: #fff;
 }
 /*--------------------------------------Special Paddings, Margins and Text*/
 
@@ -50,9 +50,9 @@ h1, h2, h3, h4 {
     float: none;
 }
 
-.section-headngs {
+.section-heading {
     font-family: 'Exo', sans-serif;
-    font-size: 300px;
+    font-size: 300;
     margin-top: 25px;
     margin-bottom: 40px;
 }
@@ -194,4 +194,14 @@ footer {
 
 #footer-details {
     padding: 20px;
+}
+
+/*--------------------------------------Three reasons*/
+.three-reasons-icon {
+    font-size: 26px;
+    color: #e67e22;
+}
+
+.three-reasons-heading {
+    margin-bottom: 15px;
 }
