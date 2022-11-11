@@ -11,12 +11,16 @@
 .bg-color-work-history {
     background-color: #9b59b6;
 }
+.bg-color-contact {
+    background-color: #fff;
+}
 .ui-menu-color-home {
     background-color: #e67e22;
 }
 .ui-menu-color-resume {
     background-color: #9b59b6;
 }
+
 .ui-menu-color-contact {
     background-color: #3498db;
 }
@@ -310,4 +314,35 @@ footer {
 
 .history-items {
     margin-bottom: 30px;
+}
+
+/*--------------------------------------Contact Form*/
+.contact-heading {
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.form-center {
+    max-width: 70%;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+button[type='submit'] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #fafafa;
+    background-color: #e84610;
+}
+
+/*--------------------------------------Media Queries*/
+@media(min-width: 992px) {
+    .form-center {
+        max-width: 50%;
+        min-height: 240px;
+        padding-top: 30px;
+        margin: 0 auto;
+    }
 }
