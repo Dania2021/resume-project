@@ -1,3 +1,7 @@
+//here user is the object that's been returned
+//from GitHub API
+//This object has many methods such as user name,
+//login name and links to their profile
 function userInformationHTML(user) {
     return `<h2>${user.name}
               <span class="small-name">
@@ -12,6 +16,28 @@ function userInformationHTML(user) {
               </div>
                <p>Followers: ${user.followers} - Following: ${user.following} <br> Repos: ${user.public_repos}</p>
            </div>`
+}
+
+function repoInformationHTML(repos) {
+    //GitHub returns this repos object as an array
+    if(repos.length == 0) {
+        return `<div class="clearfix repo-list">No repos!</div>`
+    }
+
+    var listItemsHTML = repos.map(function(repo) {
+        return `<li>
+                    <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+               </li>`
+    });
+
+    return `<div class="clearfix repo-list">
+                  <p>
+                     <strong>Repo List:</strong>
+                  </p>
+                  <ul>
+                       ${listItemsHTML.join('\n')}
+                  </ul>
+             </div>`;
 
 }
 
@@ -28,14 +54,17 @@ function fetchGithubInformation(event) {
 //when we got a response from the GitHub API
 //when() method takes a function as its first argument
 $.when(
-    $.getJSON(`https://api.github.com/users/${username}`)
+    $.getJSON(`https://api.github.com/users/${username}`),
+    $.getJSON(`https://api.github.com/users/${username}/repos`)
 
   //function to display it in the gh-user-data div
   //unless we get an error    
 ).then(
-    function(response) {
-        var userData = response;
+    function(firstResponse, secondResponse) {
+        var userData = firstResponse[0];
+        var repoData = secondResponse[0];
         $('#gh-user-data').html(userInformationHTML(userData));
+        $('#gh-repo-data').html(repoInformationHTML(repoData));
     }, function(errorResponse) {
         if(errorResponse.status === 404) {
             $('#gh-user-data').html(
