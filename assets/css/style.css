@@ -30,6 +30,13 @@
 .bg-color-three-reasons {
     background-color: #fff;
 }
+.ui-menu-color-github {
+        background-color: #1c4a6c;
+}
+    
+.ui-menu-color-interests {
+        background-color: #e74c3c;
+}
 /*--------------------------------------Special Paddings, Margins and Text*/
 
 h1, h2, h3, h4 {
@@ -345,4 +352,9 @@ button[type='submit'] {
         padding-top: 30px;
         margin: 0 auto;
     }
+}
+
+/*--------------------------------------Map*/
+div#map {
+    min-height: 360px;
 }
