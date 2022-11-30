@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <script src="https://kit.fontawesome.com/f600579850.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">   
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+    emailjs.init("GlBvk3lALEpgSsWP3");
+   })();
+</script>
     <title>Rosie</title>
 </head>
 <body>
@@ -56,9 +64,9 @@
                 <h3 class="contact-heading uppercase text-center">Got a project in mind</h3>
                 <h5 class="uppercase text-center">Let's work together!</h5>
                 <div class="form-center">
-                    <form action="">
+                    <form onsubmit="return sendMail(this);">
                         <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                        <input type="email" name="emailaddress" id="email" class="form-control" placeholder="Email" required>
                         <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Project description" required></textarea>
                         <div class="row text-center">
                             <div class="col">
@@ -122,7 +130,7 @@
             </div> 
         </div>
 
-
+       <script src="assets/js/sendEmail.js"></script>
     </footer>
 </body>
 </html>
